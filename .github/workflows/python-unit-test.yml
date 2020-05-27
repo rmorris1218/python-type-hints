@@ -19,7 +19,10 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Deps
       run: pip install -r requirements-dev.txt
-    # You can test your matrix by printing the current Python version
+    - name: Run formatting check
+      run : black --check hint.py
+    - name: Run PEP8 compliance check
+      run: flake8 hint.py
     - name: Run type checking
       run: mypy hint.py
     - name: Run unit tests

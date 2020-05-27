@@ -6,5 +6,5 @@ def tags_to_list(tags: Dict) -> List[Dict[str, str]]:
 
 
 if __name__ == "__main__":
-    tags = tags_to_list(tags={'k': 'v'})
+    tags = tags_to_list(tags={"k": "v"})
     print("hello world")
